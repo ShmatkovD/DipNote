@@ -6,3 +6,5 @@
 *.toc
 *.gz
 *.fdb_latexmk
+*.fls
+*.sublime-project
