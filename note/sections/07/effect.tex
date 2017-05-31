@@ -1,11 +1,7 @@
 \subsection{Оценка экономической эффективности применения ПС у пользователя}
 \label{sec:economics:effect}
 
-\begin{table}
-  \caption{Исходные данные для расчета экономического эффекта}
-  \label{sec:economics:effect:tab_source}
-\centering
-	\begin{tabular}{{
+\begin{longtable}{{
       |>{\raggedright}m{0.16\textwidth} |
 	    >{\raggedright}m{0.135\textwidth} |
       >{\raggedright}m{0.135\textwidth} |
@@ -13,6 +9,8 @@
       >{\raggedright}m{0.135\textwidth} |
 	    >{\raggedright\arraybackslash}m{0.135\textwidth} |
   }}
+  \caption{Исходные данные для расчета экономического эффекта}
+  \label{sec:economics:effect:tab_source}
 
   \hline
   {\begin{centering} Наименование показателей \end{centering}} &
@@ -20,7 +18,17 @@
   {\begin{centering} Единицы измерения \end{centering}} &
   {\begin{centering} Значения показателя в базовом варианте \end{centering}} &
   {\begin{centering} Значения показателя в новом варианте \end{centering}} &
-  {\begin{centering} Наименование источника информации \end{centering}} \\
+  {\begin{centering} Наименование источника информации \end{centering}\arraybackslash} \\
+  \endfirsthead
+
+  \caption*{Продолжение таблицы \ref{sec:economics:effect:tab_source}}\\
+  \hline
+	\centering 1 & \centering 2 & \centering 3 & \centering 4 & \centering 5 & \centering\arraybackslash 6 \\
+  \hline
+  \endhead
+
+  \hline
+	\centering 1 & \centering 2 & \centering 3 & \centering 4 & \centering 5 & \centering\arraybackslash 6 \\
 
   \hline
   1. Капитальные вложения, включая затраты пользователя на приобретение &
@@ -44,7 +52,7 @@
 
   \hline
   6. Коэффициент начислений на зарплату &
-  ${\text{К}}_{\text{Н}}$ & & 1.2 & 1.2 & Рассчитывается по данным пользователя \\
+  ${\text{К}}_{\text{Н}}$ & & 1.2 & 1.2 & Рас\-чи\-ты\-ва\-ет\-ся по данным пользователя \\
 
   \hline
   7. Среднемесячное количество рабочих дней &
@@ -60,7 +68,7 @@
 
   \hline
   10. Средняя трудоемкость работ на задачу &
-  ${\text{Т}}_{\text{С1}}$,${\text{Т}}_{\text{С2}}$ & Человеко-часов & 8 & 0.5 & Рассчитывается по данным пользователя \\
+  ${\text{Т}}_{\text{С1}}$,${\text{Т}}_{\text{С2}}$ & Человеко-часов & 8 & 0.5 & Рас\-чи\-ты\-ва\-ет\-ся по данным пользователя \\
 
   \hline
   11. Количество часов работы в день &
@@ -71,5 +79,4 @@
   ${\text{Н}}_{\text{П}}$ & \% & & 18 & \\
 
   \hline
-\end{tabular}
-\end{table}
+\end{longtable}
