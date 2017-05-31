@@ -6,7 +6,7 @@
 % Зачем: Настройка Times New Roman.
 % Рекомендовано для Windows (нужен PSCyr, подробности см. в fonts_windows.tex)
 % раскомментировать, чтобы использовать:
-% \input{fonts_windows}% не забудьте закомментировать 
+% \input{fonts_windows}% не забудьте закомментировать
 \input{fonts_linux}
 
 % Рекомендовано для Linux (нужен scalable-cyrfonts-tex, подробности см. в fonts_linux.tex)
@@ -49,11 +49,11 @@
 
 % Зачем: Настраивает межстрочный интервал, для размещения 40 +/- 3 строки текста на странице.
 % Почему: Пункт 2.1.1 Требований по оформлению пояснительной записки.
-\usepackage[nodisplayskipstretch]{setspace} 
+\usepackage[nodisplayskipstretch]{setspace}
 \setstretch{1.1}
 %\onehalfspacing
 
-% Зачем: Выбор шрифта по-умолчанию. 
+% Зачем: Выбор шрифта по-умолчанию.
 % Почему: Пункт 2.1.1 Требований по оформлению пояснительной записки.
 % Примечание: В требованиях не указан, какой именно шрифт использовать. По традиции используем TNR.
 \renewcommand{\rmdefault}{ftm} % Times New Roman
@@ -71,7 +71,7 @@
 
 % Зачем: Добавляет скобку 1) к номеру сноски
 % Почему: Пункты 2.9.2 и 2.9.1 Требований по оформлению пояснительной записки.
-\makeatletter 
+\makeatletter
 \def\@makefnmark{\hbox{\@textsuperscript{\normalfont\@thefnmark)}}}
 \makeatother
 
@@ -123,7 +123,7 @@
 \fancyfoot[R]{\thepage} % установка верхнего колонтитула
 \renewcommand{\footrulewidth}{0pt} % убрать разделительную линию внизу страницы
 \renewcommand{\headrulewidth}{0pt} % убрать разделительную линию вверху страницы
-\fancypagestyle{plain}{ 
+\fancypagestyle{plain}{
     \fancyhf{}
     \rfoot{\thepage}}
 \setlength{\footskip}{6mm}
@@ -143,23 +143,23 @@
 
 % Зачем: Задает стиль заголовков подразделов
 % Почему: Пункты 2.1.1, 2.2.5 и ПРИЛОЖЕНИЕ Л Требований по оформлению пояснительной записки.
+% \makeatletter
+% \renewcommand\subsection{%
+%   \@startsection{subsection}{2}%
+%     {\fivecharsapprox\bfseries}%
+%     {-1em \@plus -1ex \@minus -.2ex}%
+%     {1em \@plus .2ex}%
+%     {\raggedright\hyphenpenalty=10000\normalfont\normalsize}}
+% \makeatother
+% Полужирным и номер, и текст заголовка (если ваша кафедра не ПОИТ)
 \makeatletter
 \renewcommand\subsection{%
   \@startsection{subsection}{2}%
-    {\fivecharsapprox\bfseries}%
+    {\fivecharsapprox}%
     {-1em \@plus -1ex \@minus -.2ex}%
     {1em \@plus .2ex}%
-    {\raggedright\hyphenpenalty=10000\normalfont\normalsize}}
+    {\raggedright\hyphenpenalty=10000\normalfont\normalsize\bfseries}}
 \makeatother
-% Полужирным и номер, и текст заголовка (если ваша кафедра не ПОИТ)
-% \makeatletter
-% \renewcommand\subsection{%
-  % \@startsection{subsection}{2}%
-    % {\fivecharsapprox}%
-    % {-1em \@plus -1ex \@minus -.2ex}%
-    % {1em \@plus .2ex}%
-    % {\raggedright\hyphenpenalty=10000\normalfont\normalsize\bfseries}}
-% \makeatother
 
 
 % Зачем: Задает стиль заголовков пунктов
@@ -262,13 +262,13 @@
     {
     %%% Следующие строки определяют специфические требования разных редакций стандартов. Раскоменнтируйте нужные 2 строки
     %% стандартный абзац, СТП-01 2010
-    %\par 
+    %\par
     %\tabularx{\textwidth-\fivecharsapprox}{@{}ll@{ --- } X }
     %% без отступа, СТП-01 2013
-    \noindent 
+    \noindent
     \tabularx{\textwidth}{@{}ll@{ --- } X }
     }
-    { 
+    {
     \\[\parsep]
     \endtabularx
     \vspace{-3mm} % костыль, вдруг понадобится после "где"-области убрать пустую строку
@@ -279,7 +279,7 @@
 \usepackage{amsmath}
 
 
-% Зачем: Поддержка ажурного и готического шрифтов 
+% Зачем: Поддержка ажурного и готического шрифтов
 \usepackage{amsfonts}
 
 
@@ -500,7 +500,7 @@
 \newcounter{totreferences}
 \newcounter{totequation}
 
-\providecommand\totfig{} 
+\providecommand\totfig{}
 \providecommand\tottab{}
 \providecommand\totref{}
 \providecommand\toteq{}
@@ -565,7 +565,7 @@
 % \end{landscape}
 \usepackage{lscape}
 
-% Зачем: одноименную команду нужно писать в конце 
+% Зачем: одноименную команду нужно писать в конце
 % макросов, чтобы компенсировать съедаемый латехом
 % пробел (там где нужно).
 \usepackage{xspace}

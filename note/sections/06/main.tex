@@ -11,47 +11,47 @@
 Для начала обновим базу данных пакетов:
 
 \begin{lstlisting}
-  sudo apt-get update
+sudo apt-get update
 \end{lstlisting}
 
 Теперь установим Docker. Добавьте ключ GPG официального репозитория Docker в вашу систему:
 
 \begin{lstlisting}
-  sudo apt-key adv --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 58118E89F3A912897C070ADBF76221572C52609D
+sudo apt-key adv --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 58118E89F3A912897C070ADBF76221572C52609D
 \end{lstlisting}
 
 Добавим репозиторий Docker в список источников пакетов утилиты APT:
 
 \begin{lstlisting}
-  sudo apt-add-repository 'deb https://apt.dockerproject.org/repo ubuntu-xenial main'
+sudo apt-add-repository 'deb https://apt.dockerproject.org/repo ubuntu-xenial main'
 \end{lstlisting}
 
 Обновим базу данных пакетов информацией о пакетах Docker из вновь добавленного репозитория:
 
 \begin{lstlisting}
-  sudo apt-get update
+sudo apt-get update
 \end{lstlisting}
 
 Далее, наконец-то, установим Docker:
 
 \begin{lstlisting}
-  sudo apt-get install -y docker-engine
+sudo apt-get install -y docker-engine
 \end{lstlisting}
 
 После завершения выполнения этой команды Docker должен быть установлен, демон запущен, и процесс должен запускаться при загрузке системы. Проверим, что процесс запущен:
 
 \begin{lstlisting}
-  sudo systemctl status docker
+sudo systemctl status docker
 \end{lstlisting}
 
 Вывод должен быть похож на представленный ниже, сервис должен быть запущен и активен:
 
 \begin{lstlisting}
-  ● docker.service - Docker Application Container Engine
-   Loaded: loaded (/lib/systemd/system/docker.service; enabled; vendor preset: enabled)
-   Active: active (running) since Sun 2016-05-01 06:53:52 CDT; 1 weeks 3 days ago
-     Docs: https://docs.docker.com
-  Main PID: 749 (docker)
+docker.service - Docker Application Container Engine
+Loaded: loaded (/lib/systemd/system/docker.service; enabled; vendor preset: enabled)
+Active: active (running) since Sun 2016-05-01 06:53:52 CDT; 1 weeks 3 days ago
+  Docs: https://docs.docker.com
+Main PID: 749 (docker)
 \end{lstlisting}
 
 При установке Docker мы получаем не только сервис (демон) Docker, но и утилиту командной строки docker или клиент Docker.
@@ -59,7 +59,7 @@
 Далее необходимо загрузить контейнер на машину:
 
 \begin{lstlisting}
-  docker pull dshmatkov/genrify
+docker pull dshmatkov/genrify
 \end{lstlisting}
 
 Перед тем как загружать контейнер, необходимо авторизоваться у автора контейнера, так как он является приватным.
@@ -67,7 +67,7 @@
 После нужно запустить контейнер:
 
 \begin{lstlisting}
-  docker run -p 127.0.0.1:80:8000 dshmatkov/genrify
+docker run -p 127.0.0.1:80:8000 dshmatkov/genrify
 \end{lstlisting}
 
 Порт контейнера 8000 будет привязан к порту 80 по адресу 127.0.0.1 на локальной системе.
