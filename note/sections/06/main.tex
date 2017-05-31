@@ -6,46 +6,39 @@
 
 Для того, чтобы установить и подготовить сервис для использования, необходимо установить Docker на используемую систему.
 
-Далее мы опишем процесс установки Docker на системы семейства Linux/Debian.
+Далее мы опишем процесс установки Docker на системы семейства \\Linux/Debian.
 
 Для начала обновим базу данных пакетов:
-
 \begin{lstlisting}
 sudo apt-get update
 \end{lstlisting}
 
 Теперь установим Docker. Добавьте ключ GPG официального репозитория Docker в вашу систему:
-
 \begin{lstlisting}
 sudo apt-key adv --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 58118E89F3A912897C070ADBF76221572C52609D
 \end{lstlisting}
 
 Добавим репозиторий Docker в список источников пакетов утилиты APT:
-
 \begin{lstlisting}
 sudo apt-add-repository 'deb https://apt.dockerproject.org/repo ubuntu-xenial main'
 \end{lstlisting}
 
 Обновим базу данных пакетов информацией о пакетах Docker из вновь добавленного репозитория:
-
 \begin{lstlisting}
 sudo apt-get update
 \end{lstlisting}
 
 Далее, наконец-то, установим Docker:
-
 \begin{lstlisting}
 sudo apt-get install -y docker-engine
 \end{lstlisting}
 
 После завершения выполнения этой команды Docker должен быть установлен, демон запущен, и процесс должен запускаться при загрузке системы. Проверим, что процесс запущен:
-
 \begin{lstlisting}
 sudo systemctl status docker
 \end{lstlisting}
 
 Вывод должен быть похож на представленный ниже, сервис должен быть запущен и активен:
-
 \begin{lstlisting}
 docker.service - Docker Application Container Engine
 Loaded: loaded (/lib/systemd/system/docker.service; enabled; vendor preset: enabled)
@@ -57,7 +50,6 @@ Main PID: 749 (docker)
 При установке Docker мы получаем не только сервис (демон) Docker, но и утилиту командной строки docker или клиент Docker.
 
 Далее необходимо загрузить контейнер на машину:
-
 \begin{lstlisting}
 docker pull dshmatkov/genrify
 \end{lstlisting}
@@ -65,7 +57,6 @@ docker pull dshmatkov/genrify
 Перед тем как загружать контейнер, необходимо авторизоваться у автора контейнера, так как он является приватным.
 
 После нужно запустить контейнер:
-
 \begin{lstlisting}
 docker run -p 127.0.0.1:80:8000 dshmatkov/genrify
 \end{lstlisting}
