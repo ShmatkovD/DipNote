@@ -3,22 +3,22 @@
 
 \begin{longtable}{{
       |>{\raggedright}m{0.16\textwidth} |
-	    >{\raggedright}m{0.135\textwidth} |
-      >{\raggedright}m{0.135\textwidth} |
-      >{\raggedright}m{0.135\textwidth} |
-      >{\raggedright}m{0.135\textwidth} |
-	    >{\raggedright\arraybackslash}m{0.135\textwidth} |
+	    >{\centering}m{0.135\textwidth} |
+      >{\centering}m{0.135\textwidth} |
+      >{\centering}m{0.135\textwidth} |
+      >{\centering}m{0.135\textwidth} |
+	    >{\centering\arraybackslash}m{0.135\textwidth} |
   }}
   \caption{Исходные данные для расчета экономического эффекта}
   \label{sec:economics:effect:tab_source}
 
   \hline
-  {\begin{centering} Наименование показателей \end{centering}} &
-  {\begin{centering} Обозначения \end{centering}} &
-  {\begin{centering} Единицы измерения \end{centering}} &
-  {\begin{centering} Значения показателя в базовом варианте \end{centering}} &
-  {\begin{centering} Значения показателя в новом варианте \end{centering}} &
-  {\begin{centering} Наименование источника информации \end{centering}\arraybackslash} \\
+  {\begin{center} На\-име\-но\-ва\-ние показателей \end{center}} &
+  {\begin{center} Обо\-зна\-че\-ния \end{center}} &
+  {\begin{center} Единицы измерения \end{center}} &
+  {\begin{center} Значения показателя в базовом варианте \end{center}} &
+  {\begin{center} Значения показателя в новом варианте \end{center}} &
+  {\begin{center} На\-име\-но\-ва\-ние источника информации \end{center}\arraybackslash} \\
   \endfirsthead
 
   \caption*{Продолжение таблицы \ref{sec:economics:effect:tab_source}}\\
@@ -42,7 +42,7 @@
   3 Время простоя сервиса, обусловленное ПО, в день &
   ${\text{П}}_{\text{1}}$,${\text{П}}_{\text{2}}$ & мин & 120 & 10 & Расчетные данные пользователя и паспорт ПО \\
 
-  %\hline
+  \hline
   4 Стоимость одного часа простоя &
   ${\text{С}}_{\text{П}}$ & руб. & 30.1 & 30.1 & Расчетные данные пользователя и паспорт ПО \\
 
@@ -70,7 +70,7 @@
   10 Средняя трудоемкость работ на задачу &
   ${\text{Т}}_{\text{С1}}$,${\text{Т}}_{\text{С2}}$ & Человеко-часов & 8 & 0.5 & Рас\-чи\-ты\-ва\-ет\-ся по данным пользователя \\
 
-  %\hline
+  \hline
   11 Количество часов работы в день &
   ${\text{Т}}_{\text{Ч}}$ & ч & 8 & 8 & Принято для рассчета \\
 
@@ -85,7 +85,7 @@
 Экономия затрат на заработную плату в расчете на 1 задачу (${\text{C}}_{\text{зe}}$):
 \begin{equation}
 \label{sec:economics:effect:form_jew}
-{\text{C}}_{\text{ЗЕ}} = \frac{ {\text{З}}_{\text{СМ}} \cdot ( {\text{Т}}_{\text{с1}} - {\text{Т}}_{\text{с2}} ) }{ {\text{Д}}_{\text{Р}} \cdot {\text{}Т}_{\text{Ч}} }
+{\text{C}}_{\text{ЗЕ}} = \frac{ {\text{З}}_{\text{СМ}} \cdot ( {\text{Т}}_{\text{с1}} - {\text{Т}}_{\text{с2}} ) }{ {\text{Д}}_{\text{Р}} \cdot {\text{}Т}_{\text{Ч}} } \text{ ,}
 \end{equation}
 где ${\text{З}}_{\text{cм}}$ -- среднемесячная заработная плата одного программиста (руб.); ${\text{T}}_{\text{c1}}$, ${\text{T}}_{\text{c2}}$ -- снижение трудоемкости работ в расчете на 1 задачу (человеко-часов); ${\text{T}}_{\text{ч}}$ -- количество часов работы в день (ч); ${\text{Д}}_{\text{p}}$ -- среднемесячное количество рабочих дней.
 $${\text{C}}_{\text{ЗЕ}} = 39.36 (\text{руб.})$$
@@ -93,7 +93,7 @@ $${\text{C}}_{\text{ЗЕ}} = 39.36 (\text{руб.})$$
 Экономия заработной платы при использовании нового ПО (тыс руб.):
 \begin{equation}
 \label{sec:economics:effect:form_zp}
-{\text{C}}_{\text{З}} = {\text{С}}_{\text{ЗЕ}} \cdot {\text{А}}_{\text{2}}
+{\text{C}}_{\text{З}} = {\text{С}}_{\text{ЗЕ}} \cdot {\text{А}}_{\text{2}} \text{ ,}
 \end{equation}
 где ${\text{С}}_{\text{з}}$ -- экономия заработной платы; ${\text{А}}_{\text{2}}$ -- количество типовых задач, решаемых за год (задач).
 $${\text{C}}_{\text{З}} = 70840 (\text{руб.})$$
@@ -108,7 +108,7 @@ $${\text{C}}_{\text{Н}} = 85008 (\text{руб.})$$
 Экономия за счет сокращения простоев сервиса (${\text{С}}_{\text{с}}$) рассчитывается по  формуле:
 \begin{equation}
 \label{sec:economics:effect:form_prost}
-{\text{C}}_{\text{C}} = \frac{ ( {\text{П}}_{\text{1}} - {\text{П}}_{\text{2}} ) \cdot {\text{Д}}_{\text{РГ}} \cdot {\text{С}}_{\text{П}} }{ 60 }
+{\text{C}}_{\text{C}} = \frac{ ( {\text{П}}_{\text{1}} - {\text{П}}_{\text{2}} ) \cdot {\text{Д}}_{\text{РГ}} \cdot {\text{С}}_{\text{П}} }{ 60 } \text{ ,}
 \end{equation}
 где ${\text{Д}}_{\text{РГ}}$ -- плановый фонд работы сервиса (дней).
 $${\text{C}}_{\text{C}} = 1158 (\text{руб.})$$
@@ -133,17 +133,17 @@ $${\text{ΔП}}_{\text{Ч}} = 70657 (\text{руб.})$$
 
 \begin{longtable}{{
   |>{\raggedright}m{0.145\textwidth} |
-  >{\raggedright}m{0.1\textwidth} |
-  >{\raggedright}m{0.16\textwidth} |
-  >{\raggedright}m{0.13\textwidth} |
-  >{\raggedright}m{0.15\textwidth} |
-  >{\raggedright\arraybackslash}m{0.13\textwidth}|
+  >{\centering}m{0.1\textwidth} |
+  >{\centering}m{0.16\textwidth} |
+  >{\centering}m{0.13\textwidth} |
+  >{\centering}m{0.15\textwidth} |
+  >{\centering\arraybackslash}m{0.13\textwidth}|
 }}
   \caption{Расчет экономического эффекта от использования нового программного средства}
   \label{sec:economics:effect:tab_effect}
 
   \hline
-  По\-ка\-за\-те\-ли & Еди\-ни\-цы измерения & 2017 г. & 2018 г. & 2019 г. & 2020 г. \\
+  {\begin{center} По\-ка\-за\-те\-ли \end{center}} & Еди\-ни\-цы измерения & 2017 г. & 2018 г. & 2019 г. & 2020 г. \\
   \endfirsthead
 
   \caption*{Продолжение таблицы \ref{sec:economics:effect:tab_effect}}\\

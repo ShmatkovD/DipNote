@@ -115,7 +115,7 @@
 Объем программного средства вычисляется по формуле:
 \begin{equation}
 \label{formula:economics:cost:f_vo}
-V_{O} = \sum_{i=1}^n V_{i}
+V_{O} = \sum_{i=1}^n V_{i}  \text{ ,}
 \end{equation}
 где $V_{i}$ -- объем отдельной функции ПО; $n$ -- общее число функций; $V_{\text{О}}$ -- общий объем ПС.
 
@@ -124,15 +124,15 @@ $V_{\text{О}} = 32710$ (строк исходного кода).
 Исходя из режима работы в реальном времени, а также обеспечения существенного распараллеливания вычислений и реализации особо сложных инженерных и научных расчетов, применяется коэффициент $K_{\text{С}}$ к объему ПО, который определяется по формуле:
 \begin{equation}
 \label{formula:economics:cost:f_kc}
-K_{\text{С}} = 1 + \sum_{i=1}^n K_{i}
+K_{\text{С}} = 1 + \sum_{i=1}^n K_{i} \text{ ,}
 \end{equation}
 где $K_{i}$ -- коэффициент, соответствующий степени повышения сложности ПО за счет конкретной характеристики;
-$$K_{\text{C}} = 1 + 0.06 + 0.06 + 0.06 = 1.18$$.
+$$K_{\text{C}} = 1 + 0.06 + 0.06 + 0.06 = 1.18$$
 
 С учетом дополнительного коэффициента сложности ${\text{К}}_{\text{СЛ}}$ рассчитывается общая трудоемкость ПС по формуле:
 \begin{equation}
 \label{formula:economics:cost:f_kcl}
-{\text{T}}_{\text{O}} = {\text{T}}_{\text{Н}} + {\text{К}}_{\text{С}}
+{\text{T}}_{\text{O}} = {\text{T}}_{\text{Н}} + {\text{К}}_{\text{С}} \text{ ,}
 \end{equation}
 где ${\text{Т}}_{\text{O}}$ -- общая трудоемкость; ${\text{T}}_{\text{H}}$ -- нормативная трудоемкость ПС; ${\text{K}}_{\text{C}}$ -- дополнительный коэффициент сложности ПС. Нормативная трудоемкость ПО (${\text{T}}_{\text{H}}$) -- 1087 чел./дн.; коэффициент сложности (${\text{K}}_{\text{C}}$) -- 1.12; коэффициент, учитывающий степень использования при разработке ПО стандартных модулей (${\text{K}}_{\text{T}}$) -- 0.8; коэффициент новизны разрабатываемого ПО (${\text{K}}_{\text{H}}$) -- 0.9.
 
@@ -146,7 +146,7 @@ $${\text{T}}_{\text{O}} = 830 \cdot 1.18 \cdot 0.8 \cdot 0.9 = 705 (\text{чел
 На основе уточненной трудоемкости разработки ПС и установленного периода разработки, общая плановая численность разработчиком равна:
 \begin{equation}
 \label{formula:economics:cost:f_chr}
-{\text{Ч}}_{\text{Р}} = \frac{ {\text{Т}}_{\text{О}} }{ {\text{Т}}_{\text{Р}} \cdot {\text{Ф}}_{\text{ЭФ}} }
+{\text{Ч}}_{\text{Р}} = \frac{ {\text{Т}}_{\text{О}} }{ {\text{Т}}_{\text{Р}} \cdot {\text{Ф}}_{\text{ЭФ}} } \text{ ,}
 \end{equation}
 где ${\text{Ф}}_{\text{ЭФ}}$ -- эффективный фонд времени работы одного работника в течение года (дн.); ${\text{Т}}_{\text{О}}$ -- общая трудоемкость разработки проекта (чел./дн.); ${\text{Т}}_{\text{Р}}$ -- срок разработки проекта (лет).
 
@@ -154,6 +154,7 @@ $${\text{T}}_{\text{O}} = 830 \cdot 1.18 \cdot 0.8 \cdot 0.9 = 705 (\text{чел
 \begin{equation}
 \label{formula:economics:cost:f_fef}
 {\text{Ф}}_{\text{ЭФ}} = {\text{Д}}_{\text{Г}} - {\text{Д}}_{\text{П}} - {\text{Д}}_{\text{В}} - {\text{Д}}_{\text{О}}
+\text{ ,}
 \end{equation}
 где ${\text{Д}}_{\text{Г}}$ -- количество дней в году; ${\text{Д}}_{\text{П}}$ -- количество праздничных дней в году; ${\text{Д}}_{\text{В}}$ -- количество выходных дней в году; ${\text{Д}}_{\text{О}}$ -- количество дней отпуска.
 
@@ -168,17 +169,17 @@ $${\text{Ч}}_{\text{Р}} = \frac{ 705 }{ 1.0 \cdot 238 } \approx 2.96 \approx 3
   \centering
   \begin{tabular}{{
     |>{\raggedright}m{0.3\textwidth} |
-    >{\raggedright}m{0.08\textwidth} |
-    >{\raggedright}m{0.08\textwidth} |
-    >{\raggedright}m{0.08\textwidth} |
-    >{\raggedright}m{0.08\textwidth} |
-    >{\raggedright}m{0.08\textwidth} |
-    >{\raggedright\arraybackslash}m{0.08\textwidth}|
+    >{\centering}m{0.08\textwidth} |
+    >{\centering}m{0.08\textwidth} |
+    >{\centering}m{0.08\textwidth} |
+    >{\centering}m{0.08\textwidth} |
+    >{\centering}m{0.08\textwidth} |
+    >{\centering\arraybackslash}m{0.08\textwidth}|
   }}
 
   \hline
-  {\begin{centering} Показатели \end{centering}} & \multicolumn{5}{c|}{Стадии} &
-  {\begin{centering} Итого \end{centering}} \\
+  {\begin{center} Показатели \end{center}} & \multicolumn{5}{c|}{Стадии} &
+  {\begin{center} Итого \end{center}} \\
 
   \hline
   & ТЗ & ЭП & ТП & РП & ВН & \\
@@ -220,7 +221,7 @@ $${\text{Ч}}_{\text{Р}} = \frac{ 705 }{ 1.0 \cdot 238 } \approx 2.96 \approx 3
 Часовая тарифная ставка рассчитывается путем деления месячной тарифной ставки на установленный при сорокачасовой рабочей неделе в восьмичасовом рабочем дне фонд рабочего времени – 168 часов:
 \begin{equation}
 \label{formula:economics:cost:f_chts}
-{\text{Т}}_{\text{Ч}} = {\text{Т}}_{\text{М}} / 168
+{\text{Т}}_{\text{Ч}} = {\text{Т}}_{\text{М}} / 168 \text{ ,}
 \end{equation}
 где ${\text{Т}}_{\text{Ч}}$ -- часовая тарифная ставка (руб); ${\text{Т}}_{\text{М}}$ -- месячная тарифная ставка(руб).
 
@@ -240,20 +241,20 @@ $${\text{Т}}_{\text{ч}} = 717.7 / 168 = 4.27 (\text{руб})$$
   \centering
   \begin{tabular}{{
     |>{\raggedright}m{0.14\textwidth} |
-    >{\raggedright}m{0.14\textwidth} |
-    >{\raggedright}m{0.14\textwidth} |
-    >{\raggedright}m{0.14\textwidth} |
-    >{\raggedright}m{0.14\textwidth} |
-    >{\raggedright\arraybackslash}m{0.14\textwidth}|
+    >{\centering}m{0.14\textwidth} |
+    >{\centering}m{0.14\textwidth} |
+    >{\centering}m{0.14\textwidth} |
+    >{\centering}m{0.14\textwidth} |
+    >{\centering\arraybackslash}m{0.14\textwidth}|
   }}
 
   \hline
-  {\begin{centering} Долж\-ность \end{centering}} &
-  {\begin{centering} Ко\-ли\-чес\-тво ставок \end{centering}} &
-  {\begin{centering} Тарифный разряд \end{centering}} &
-  {\begin{centering} Тарифный коэффициент \end{centering}} &
-  {\begin{centering} Месячная тарифная ставка (руб) \end{centering}} &
-  {\begin{centering} Часовая тарифная ставка(руб) \end{centering}} \\
+  {\begin{center} Долж\-ность \end{center}} &
+  {\begin{center} Ко\-ли\-чес\-тво ставок \end{center}} &
+  {\begin{center} Тарифный разряд \end{center}} &
+  {\begin{center} Тарифный коэффициент \end{center}} &
+  {\begin{center} Месячная тарифная ставка (руб) \end{center}} &
+  {\begin{center} Часовая тарифная ставка(руб) \end{center}} \\
 
   \hline
   Начальник отдела (ведущий инженер программист) &
@@ -275,6 +276,7 @@ $${\text{Т}}_{\text{ч}} = 717.7 / 168 = 4.27 (\text{руб})$$
 \begin{equation}
 \label{formula:economics:cost:f_zp}
 {\text{З}}_{\text{О}} = \sum_{i=1}^n {\text{З}}_{\text{Сi}} \cdot {\text{Ф}}_{\text{Рi}} \cdot {\text{К}}_{\text{i}}
+\text{ ,}
 \end{equation}
 где $n$ -- количество исполнителей, занятых разработкой конкретного ПО; ${\text{З}}_{\text{Сi}}$ -- среднедневная заработная плата i-го исполнителя (д.е.); ${\text{Ф}}_{\text{Рi}}$ -- плановый фонд рабочего времени i-го исполнителя (дн.); ${\text{К}}$ -- коэффициент премирования ($1.2$).
 $$4.57 \cdot 8 \cdot 238 \cdot 1.2 + 4.27 \cdot 8 \cdot 238 \cdot 1.2 + 4.27 \cdot 8 \cdot 238 \cdot 1.2 = 31736.4 (\text{руб})$$
@@ -291,6 +293,7 @@ $$\frac{ 31736.4 \cdot 20 }{ 100 } = 6347.28 (\text{руб})$$
 \begin{equation}
 \label{formula:economics:cost:f_fszn}
 {\text{З}}_{\text{СЗ}} = \frac{ ({\text{З}}_{\text{О}} + {\text{З}}_{\text{Д}}) \cdot {\text{Н}}_{\text{СЗ}} }{ 100 }
+\text{ ,}
 \end{equation}
 где ${\text{Н}}_{\text{СЗ}}$ -- норматив отчислений в фонд социальной защиты населения и на обязательное страхование (34\% + 0.6\%).
 $$\frac{ (31736.4 + 6347.28) \cdot 34.6 }{ 100 } = 13176.95 (\text{руб})$$
@@ -305,35 +308,35 @@ $${\text{Р}}_{\text{М}} = 2665.6 (\text{руб})$$
 Затраты по статье «Накладные расходы» (${\text{Р}}_{\text{Н}}$), связанные с необходимостью содержания аппарата управления, вспомогательных хозяйств и опытных (экспериментальных) производств, а также с расходами на общехозяйственные нужды (${\text{Р}}_{\text{Н}}$), определяются по формуле:
 \begin{equation}
 \label{formula:economics:cost:f_nr}
-{\text{Р}}_{\text{Н}} = \frac{ {\text{З}}_{\text{СЗ}} \cdot {\text{Н}}_{\text{РН}} }{ 100 }
+{\text{Р}}_{\text{Н}} = \frac{ {\text{З}}_{\text{СЗ}} \cdot {\text{Н}}_{\text{РН}} }{ 100 } \text{ ,}
 \end{equation}
 $$\frac{ 40578.05 \cdot 100  }{ 100 } = 40578.05 (\text{руб})$$
 
 Полная себестоимость:
 \begin{equation}
 \label{formula:economics:cost:f_psb}
-{\text{С}}_{\text{П}} = {\text{З}}_{\text{О}} + {\text{З}}_{\text{Д}} + {\text{Р}}_{\text{М}} + {\text{З}}_{\text{СЗ}} + {\text{Р}}_{\text{Н}}
+{\text{С}}_{\text{П}} = {\text{З}}_{\text{О}} + {\text{З}}_{\text{Д}} + {\text{Р}}_{\text{М}} + {\text{З}}_{\text{СЗ}} + {\text{Р}}_{\text{Н}} \text{ ,}
 \end{equation}
 $${\text{С}}_{\text{П}} = 85662.63 (\text{руб})$$
 
 Прогнозируемая прибыль ПС рассчитывается по формуле:
 \begin{equation}
 \label{formula:economics:cost:f_pp}
-{\text{П}}_{\text{ПС}} = \frac{ {\text{С}}_{\text{П}} \cdot {\text{У}}_{\text{Р}} }{ 100 }
+{\text{П}}_{\text{ПС}} = \frac{ {\text{С}}_{\text{П}} \cdot {\text{У}}_{\text{Р}} }{ 100 } \text{ ,}
 \end{equation}
 $$\frac{ 85662 \cdot 25  }{ 100 } = 21415.66 (\text{руб})$$
 
 Прогнозируемая отпускная цена ПС вычисляется по формуле:
 \begin{equation}
 \label{formula:economics:cost:f_oprice}
-{\text{Ц}}_{\text{П}} = {\text{С}}_{\text{П}} + {\text{П}}_{\text{ПС}}
+{\text{Ц}}_{\text{П}} = {\text{С}}_{\text{П}} + {\text{П}}_{\text{ПС}} \text{ ,}
 \end{equation}
 $${\text{Ц}}_{\text{П}} = 107078 (\text{руб})$$
 
 Налог на добавленную стоимость (НДС):
 \begin{equation}
 \label{formula:economics:cost:f_nds}
-{\text{НДС}} = \frac{ {\text{Ц}}_{\text{П}} \cdot {\text{Н}}_{\text{ДС}} }{ 100 }
+{\text{НДС}} = \frac{ {\text{Ц}}_{\text{П}} \cdot {\text{Н}}_{\text{ДС}} }{ 100 } \text{ ,}
 \end{equation}
 где ${\text{Н}}_{\text{ДС}}$ -- норматив НДС (\%).
 $${\text{НДС}} = 19274.09 (\text{руб})$$
@@ -348,7 +351,7 @@ $${\text{Ц}}_{\text{О}} = 126352 (\text{руб})$$
 Кроме того, организация-разработчик осуществляет затраты на сопровождение ПС (${\text{Р}}_{\text{С}}$):
 \begin{equation}
 \label{formula:economics:cost:f_sup}
-{\text{Р}}_{\text{С}} = \frac{ {\text{С}}_{\text{П}} \cdot {\text{Н}}_{\text{С}} }{ 100 }
+{\text{Р}}_{\text{С}} = \frac{ {\text{С}}_{\text{П}} \cdot {\text{Н}}_{\text{С}} }{ 100 } \text{ ,}
 \end{equation}
 где ${\text{Н}}_{\text{С}}$ -- норматив расходов на сопровождение и адаптацию (20\%).
 $${\text{Р}}_{\text{С}} = 17132.53 (\text{руб})$$
