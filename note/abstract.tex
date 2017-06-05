@@ -3,7 +3,7 @@
 
 % Зачем: чтобы можно было вывести общее число страниц.
 % Добавляется единица, поскольку последняя страница -- ведомость.
-\FPeval{\totalpages}{round(\getpagerefnumber{LastPage} + 1, 0)}
+\FPeval{\totalpages}{round(\getpagerefnumber{LastPage}, 0)}
 
 \begin{center}
 	Пояснительная записка \num{\totalpages}~с., \num{\totfig{}}~рис., \num{\tottab{}}~табл., \num{\toteq{}}~формулы, \num{\totref{}}~источника.
